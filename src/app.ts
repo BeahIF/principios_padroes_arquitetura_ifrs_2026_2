@@ -1,4 +1,5 @@
 import express from "express";
+import { accountsRoutes } from "./routes/accounts.routes.js";
 
 export const app = express();
 
@@ -15,3 +16,4 @@ app.get("/health", (_request, response) => {
     status: "ok",
   });
 });
+app.use(accountsRoutes);
